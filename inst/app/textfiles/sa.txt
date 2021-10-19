@@ -1,0 +1,3 @@
+This page provides an overview for the daily counts of tests, confirmed cases, recoveries, and deaths in South Africa over time.
+
+The above interactive plot provides a visual representation of the data in the table below. 

@@ -1,0 +1,29 @@
+Package: covidcolsa
+Title: Covid-19 Shiny Dashboard for Colombia and South Africa
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Rahul Bharadwaj",
+           family = "Mysore Venkatesh",
+           role = c("aut", "cre"),
+           email = "rahulbharadwaj97@gmail.com",
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: Contains data and statistics in R shiny app that analyses the Covid-19 situation in Colombia and South Africa. Counts of tests, cases confirmed, recoveries and deaths are summarized and compared between the two regions. The app itself and its functionalities is made available through functions and data from the package 'covidcolsa'. There are three main datasets which include one with both countries data named 'covid_colsa' and the other two named 'DailyCOL' and 'DailyZAF' for daily counts in the regions.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Depends: 
+    R (>= 2.10)
+Suggests: 
+    testthat,
+    knitr,
+    rmarkdown,
+    ggplot2
+VignetteBuilder: knitr
+Imports: 
+    shiny,
+    usethis,
+    ggplot2,
+    dplyr,
+    gridExtra

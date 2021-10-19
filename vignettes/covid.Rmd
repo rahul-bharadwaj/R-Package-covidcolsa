@@ -1,0 +1,57 @@
+---
+title: "Covid Statistics"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Covid Statistics}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.width = 6,
+  fig.height = 6,
+  fig.align = 'center'
+)
+```
+
+```{r setup}
+library(covidcolsa)
+library(ggplot2)
+library(gridExtra)
+```
+
+## **Data Description -**
+
+* This package provides the `covid_colsa` dataset which contains 35 variables for Covid stats in Colombia and South Africa from January 2020.
+
+* The data comes from Guidotti, E., Ardia, D., (2020), "COVID-19 Data Hub", Journal of Open Source Software 5(51):2376, doi: 10.21105/joss.02376, through the R package "COVID19" and filtered for the country Colombia and South Africa.
+
+```{r data}
+covid_colsa
+```
+
+```{r plot1}
+t <- ggplot(covid_colsa) +
+      geom_bar(aes(x = key_apple_mobility, y = tests, fill = key_apple_mobility), stat = "identity") +
+      theme(legend.title = element_blank(), axis.text.x = element_blank()) + xlab("country")
+
+c <- ggplot(covid_colsa) +
+      geom_bar(aes(x = key_apple_mobility, y = confirmed, fill = key_apple_mobility), stat = "identity") +
+      theme(legend.title = element_blank(), axis.text.x = element_blank()) + xlab("country")
+
+r <- ggplot(covid_colsa) +
+      geom_bar(aes(x = key_apple_mobility, y = recovered, fill = key_apple_mobility), stat = "identity") +
+      theme(legend.title = element_blank(), axis.text.x = element_blank()) + xlab("country")
+
+d <- ggplot(covid_colsa) +
+      geom_bar(aes(x = key_apple_mobility, y = deaths, fill = key_apple_mobility), stat = "identity") +
+      theme(legend.title = element_blank(), axis.text.x = element_blank()) + xlab("country")
+
+grid.arrange(t, c, r, d)
+```
+
+
+

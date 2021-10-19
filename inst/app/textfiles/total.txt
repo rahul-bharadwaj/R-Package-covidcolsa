@@ -1,0 +1,3 @@
+Select one of the countries in the select input dropdown menu on the left top to examine a region of choice. The selection updates the above graph and below table according to the region selected.
+
+This page has a summary of total counts of tests, confirmed cases, recoveries, and deaths in Colombia and South Africa due to COVID-19. 
